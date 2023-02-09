@@ -22,5 +22,7 @@ module "vpc" {
   tags = {
     customer = var.cust_id
     Environment = "dev"
+    "kubernetes.io/role/elb" = "1"
+    ## Tag required for public subnet
   }
 }
